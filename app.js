@@ -15,6 +15,14 @@ function setImage() {
   if (getScore() >= 100) {
     $circle.setAttribute('src', './assets/boobs.png')
   }
+
+  if (getScore() === 100) {
+    $circle.classList.add('level')
+
+    setTimeout(() => {
+      $circle.classList.remove('level')
+    }, 1000)
+  }
 }
 
 function getScore() {

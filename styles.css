@@ -45,11 +45,15 @@ body {
     transform: rotateX(var(--tiltX)) rotateY(var(--tiltY));
 }
 
+.circle img.level {
+    animation: levelUp 1s forwards;
+}
+
 .plus-one {
     position: absolute;
     font-family: Inter;
     text-shadow: 0px 0px 4px rgba(234, 182, 64, 0.25);
-    font-size: 24px;
+    font-size: 36px;
     font-weight: 800;
     background: linear-gradient(180deg, #e8c547 0%, #ef882b 100%);
     background-clip: text;
@@ -68,6 +72,19 @@ body {
 
     100% {
         opacity: 0;
-        transform: translateY(-50px);
+        transform: translateY(-150px);
+    }
+}
+
+@keyframes levelUp {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
     }
 }
